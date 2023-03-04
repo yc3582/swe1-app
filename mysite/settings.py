@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = ["django-env.eba-mup3naxk.us-west-2.elasticbeanstalk.com",
                  '127.0.0.1:8000/polls',
                  '127.0.0.1',
-                 'localhost']
+                 'localhost',
+                 'polls-dev.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
