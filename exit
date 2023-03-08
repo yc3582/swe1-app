@@ -1,0 +1,111 @@
+============= i-0a2806709e9fd88d1 ==============
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2023/03/08 05:20:35.706996 [INFO] Running command /bin/sh -c systemctl start cfn-hup.service
+2023/03/08 05:20:35.778719 [INFO] Instance has NOT been bootstrapped
+2023/03/08 05:20:35.778734 [INFO] Executing instruction: SetupPublishLogCronjob
+2023/03/08 05:20:35.778738 [INFO] Setup publish logs cron job...
+2023/03/08 05:20:35.778743 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2023/03/08 05:20:35.781283 [INFO] Instance has NOT been bootstrapped
+2023/03/08 05:20:35.781293 [INFO] Executing instruction: MarkBootstrapped
+2023/03/08 05:20:35.781298 [INFO] Starting MarkBootstrapped
+2023/03/08 05:20:35.781303 [INFO] Instance has NOT been bootstrapped
+2023/03/08 05:20:35.781351 [INFO] Marked instance as Bootstrapped
+2023/03/08 05:20:35.781356 [INFO] Executing instruction: Save CFN Stack Info
+2023/03/08 05:20:35.781391 [INFO] Starting SwitchCFNStack
+2023/03/08 05:20:35.781396 [INFO] Executing cleanup logic
+2023/03/08 05:20:35.781412 [INFO] Platform Engine finished execution on command: env-launch
+
+2023/03/08 05:21:56.515434 [INFO] Starting...
+2023/03/08 05:21:56.515474 [INFO] Starting EBPlatform-PlatformEngine
+2023/03/08 05:21:56.515491 [INFO] reading event message file
+2023/03/08 05:21:56.515623 [INFO] Engine received EB command cfn-hup-exec
+
+2023/03/08 05:21:56.596272 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 -r AWSEBAutoScalingGroup --region us-east-1
+2023/03/08 05:21:56.920398 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 -r AWSEBBeanstalkMetadata --region us-east-1
+2023/03/08 05:21:57.246202 [INFO] checking whether command app-deploy is applicable to this instance...
+2023/03/08 05:21:57.246216 [INFO] this command is applicable to the instance, thus instance should execute command
+2023/03/08 05:21:57.246220 [INFO] Engine command: (app-deploy)
+
+2023/03/08 05:21:57.246227 [INFO] Downloading EB Application...
+2023/03/08 05:21:57.246230 [INFO] Region: us-east-1
+2023/03/08 05:21:57.246234 [INFO] envID: e-zgxpa6mvjm
+2023/03/08 05:21:57.246242 [INFO] envBucket: elasticbeanstalk-us-east-1-022608119628
+2023/03/08 05:21:57.246252 [INFO] Using manifest file name from command request
+2023/03/08 05:21:57.246260 [INFO] Unable to get version manifest file.
+2023/03/08 05:21:57.246264 [INFO] Downloading latest manifest available.
+2023/03/08 05:21:57.246268 [INFO] Download latest app version manifest
+2023/03/08 05:21:57.246344 [INFO] resources/environments/e-zgxpa6mvjm/_runtime/versions/manifest
+2023/03/08 05:21:57.299707 [INFO] latestManifest key *: resources/environments/e-zgxpa6mvjm/_runtime/versions/manifest_1678252755169
+
+2023/03/08 05:21:57.299908 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-022608119628, object: /resources/environments/e-zgxpa6mvjm/_runtime/versions/manifest_1678252755169
+2023/03/08 05:21:57.315403 [INFO] Download successful158bytes downloaded
+2023/03/08 05:21:57.315505 [INFO] Trying to read and parse version manifest...
+2023/03/08 05:21:57.315595 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-022608119628, object: /resources/environments/e-zgxpa6mvjm/_runtime/_versions/django-tutorial/app-616e-230308_001835505886
+2023/03/08 05:21:57.329149 [INFO] Download successful26347bytes downloaded
+2023/03/08 05:21:57.329451 [INFO] Executing instruction: ElectLeader
+2023/03/08 05:21:57.329460 [INFO] Running leader election for instance i-0a2806709e9fd88d1...
+2023/03/08 05:21:57.329476 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2023/03/08 05:21:57.329490 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 0da53c4f-0fa1-4e3b-8698-d4076544ce8d --listener-id i-0a2806709e9fd88d1 --region us-east-1
+2023/03/08 05:21:57.647016 [INFO] Instance is Leader.
+2023/03/08 05:21:57.647075 [INFO] Executing instruction: stopSqsd
+2023/03/08 05:21:57.647081 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2023/03/08 05:21:57.647086 [INFO] Executing instruction: PreBuildEbExtension
+2023/03/08 05:21:57.647090 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2023/03/08 05:21:57.647106 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
+2023/03/08 05:21:57.992622 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2023/03/08 05:21:57.992657 [INFO] Executing instruction: StageApplication
+2023/03/08 05:21:57.992749 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2023/03/08 05:21:57.992764 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2023/03/08 05:21:58.000624 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2023/03/08 05:21:58.001424 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2023/03/08 05:21:58.001462 [INFO] Executing platform hooks in .platform/hooks/prebuild/
+2023/03/08 05:21:58.001478 [INFO] The dir .platform/hooks/prebuild/ does not exist
+2023/03/08 05:21:58.001482 [INFO] Finished running scripts in /var/app/staging/.platform/hooks/prebuild
+2023/03/08 05:21:58.001489 [INFO] Executing instruction: InstallDependency
+2023/03/08 05:21:58.001495 [INFO] checking dependencies file
+2023/03/08 05:21:58.001507 [INFO] Installing dependencies with requirements.txt by using Pip
+2023/03/08 05:21:58.001517 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2023/03/08 05:21:59.634934 [INFO] Collecting Django==3.2
+  Downloading Django-3.2-py3-none-any.whl (7.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 48.3 MB/s eta 0:00:00
+
+2023/03/08 05:21:59.634964 [INFO] ERROR: Could not find a version that satisfies the requirement anaconda-navigator==2.1.1 (from versions: none)
+ERROR: No matching distribution found for anaconda-navigator==2.1.1
+WARNING: You are using pip version 22.0.4; however, version 23.0.1 is available.
+You should consider upgrading via the '/var/app/venv/staging-LQM1lest/bin/python3.7 -m pip install --upgrade pip' command.
+
+2023/03/08 05:21:59.634979 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:ERROR: Could not find a version that satisfies the requirement anaconda-navigator==2.1.1 (from versions: none)
+ERROR: No matching distribution found for anaconda-navigator==2.1.1
+WARNING: You are using pip version 22.0.4; however, version 23.0.1 is available.
+You should consider upgrading via the '/var/app/venv/staging-LQM1lest/bin/python3.7 -m pip install --upgrade pip' command.
+ 
+
+2023/03/08 05:21:59.634984 [INFO] Executing cleanup logic
+2023/03/08 05:21:59.635107 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1678252919634,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1678252919634,"severity":"ERROR"}]}]}
+
+2023/03/08 05:21:59.635258 [INFO] Platform Engine finished execution on command: app-deploy
+
+2023/03/08 05:27:01.636469 [INFO] Starting...
+2023/03/08 05:27:01.636514 [INFO] Starting EBPlatform-PlatformEngine
+2023/03/08 05:27:01.636532 [INFO] reading event message file
+2023/03/08 05:27:01.636666 [INFO] Engine received EB command cfn-hup-exec
+
+2023/03/08 05:27:01.712812 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 -r AWSEBAutoScalingGroup --region us-east-1
+2023/03/08 05:27:02.109228 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:022608119628:stack/awseb-e-zgxpa6mvjm-stack/c512e4d0-bd70-11ed-b445-0ab450570d63 -r AWSEBBeanstalkMetadata --region us-east-1
+2023/03/08 05:27:02.467993 [INFO] checking whether command tail-log is applicable to this instance...
+2023/03/08 05:27:02.468007 [INFO] this command is applicable to the instance, thus instance should execute command
+2023/03/08 05:27:02.468011 [INFO] Engine command: (tail-log)
+
+2023/03/08 05:27:02.468062 [INFO] Executing instruction: GetTailLogs
+2023/03/08 05:27:02.468068 [INFO] Tail Logs...
+2023/03/08 05:27:02.468312 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
